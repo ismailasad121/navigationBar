@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--We changed it into drawer layout-->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6A0545"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1B415E"
+            app:title="History"
+            app:titleTextColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/download2" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        tools:ignore="MissingConstraints" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
